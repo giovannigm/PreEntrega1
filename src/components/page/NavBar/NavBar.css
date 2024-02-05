@@ -1,0 +1,73 @@
+.header {
+  background-color: orange;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#logoTipo {
+  width: 19%;
+  margin: 0px 15px 0px 15px;
+}
+
+.titulo-logo {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  color: black;
+}
+
+.lista-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.lista-nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 12px;
+  display: block;
+  border-radius: 10%;
+  margin: 7px;
+}
+
+.lista-nav li a:hover {
+  background-color: #dfbd82;
+}
+
+.lista-nav li ul {
+  display: none;
+  position: absolute;
+  background-color: orange;
+  list-style: none;
+  width: 111px;
+  padding: 0%;
+  border: black 1px;
+}
+
+.desplegable li a {
+  width: auto;
+}
+
+.lista-nav li:hover > ul {
+  display: block;
+}
+
+.lista-nav li ul li {
+  position: relative;
+}
+
+.lista-nav li ul li ul {
+  right: -140px;
+  top: 0px;
+}
