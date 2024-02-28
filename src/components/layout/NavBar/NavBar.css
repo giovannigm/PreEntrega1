@@ -1,8 +1,9 @@
-.header {
+header {
   background-color: orange;
   color: white;
   display: flex;
   align-items: center;
+  height: 10vh;
   justify-content: space-around;
 }
 
@@ -19,7 +20,7 @@
   margin-left: 10px;
 }
 
-.header h1 {
+header h1 {
   margin: 0;
   color: black;
 }
@@ -70,4 +71,27 @@
 .lista-nav li ul li ul {
   right: -140px;
   top: 0px;
+}
+
+/* Cartwidget */
+
+.carrito {
+  display: ruby-text;
+  width: 7vh;
+}
+.carrito img {
+  max-width: 40px;
+}
+
+.prod-carrito {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
 }

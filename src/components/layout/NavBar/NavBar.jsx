@@ -1,10 +1,11 @@
 import React from "react";
 import "./NavBar.css";
 import Cartwidget from "../../common/Cartwidget/Cartwidget";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div className="header">
+    <header>
       <div className="titulo-logo">
         <img src="/logo-tipo.svg" alt="logo-vidrialum" id="logoTipo" />
         <h1>VIDRIALUM</h1>
@@ -12,16 +13,16 @@ const NavBar = () => {
       <nav>
         <ul className="lista-nav">
           <li>
-            <a href="#">Inicio</a>
+            <Link to="/">Inicio</Link>
           </li>
           <li>
-            <a href="#">Categorias</a>
+            <a>Categorias</a>
             <ul className="desplegable">
               <li>
-                <a href="#">categoria1</a>
+                <Link to={"/category/ventanas"}>Ventanas</Link>
               </li>
               <li>
-                <a href="#">categoria2</a>
+                <Link to={"/category/puertas"}>Puertas</Link>
               </li>
             </ul>
           </li>
@@ -30,8 +31,10 @@ const NavBar = () => {
           </li>
         </ul>
       </nav>
-      <Cartwidget />
-    </div>
+      <Link to="/cart">
+        <Cartwidget />
+      </Link>
+    </header>
   );
 };
 
