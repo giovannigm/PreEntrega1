@@ -9,3 +9,8 @@ The proposal consists of developing an e-commerce focused on sales. The main obj
 
 ### Technologies used
 - React + Vite
+
+
+## initialize
+- npm install (to install node_modules)
+- npm run dev 
