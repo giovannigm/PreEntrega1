@@ -76,7 +76,7 @@ header h1 {
 /* Cartwidget */
 
 .carrito {
-  display: ruby-text;
+  display: contents;
   width: 7vh;
 }
 .carrito img {
