@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import imgCart from "../../../assets/carrito-de-compras.svg";
+import { CartContext } from "../../../context/CartContext";
 
 const Cartwidget = () => {
-  const CantidadItems = 1;
+  const { getTotalItems } = useContext(CartContext);
+  const CantidadItems = getTotalItems();
+
   return (
     <div className="carrito">
       <p className="prod-carrito">{CantidadItems}</p>

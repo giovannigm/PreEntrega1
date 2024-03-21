@@ -1,6 +1,5 @@
 export const products = [
   {
-    id: 1,
     title: "ventana 60 X 40",
     price: 1500,
     description: "ventana de baño en aluminio ",
@@ -9,7 +8,6 @@ export const products = [
     category: "ventanas",
   },
   {
-    id: 2,
     title: "ventana 120 X 100",
     price: 1900,
     description: "ventana de comedor en aluminio",
@@ -18,7 +16,6 @@ export const products = [
     category: "ventanas",
   },
   {
-    id: 3,
     title: "puerta de baño",
     price: 2800,
     description: "puerta de baño, en aluminio",
@@ -27,7 +24,6 @@ export const products = [
     category: "puertas",
   },
   {
-    id: 4,
     title: "puerta exterior",
     price: 300,
     description: "puerta de exterior de madera ",
@@ -36,7 +32,6 @@ export const products = [
     category: "puertas",
   },
   {
-    id: 5,
     title: "puerta exterior mas linda",
     price: 500,
     description: "puerta de exterior de madera mas linda",
@@ -45,7 +40,6 @@ export const products = [
     category: "puertas",
   },
   {
-    id: 6,
     title: "ventana 200 X 120",
     price: 5500,
     description: "ventana de comedor pero mas grande",

@@ -1,0 +1,38 @@
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.button-container button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+.button-container button:disabled {
+  opacity: 0.5;
+}
+
+#addCart {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#addCart:hover {
+  background-color: darkgreen;
+}
