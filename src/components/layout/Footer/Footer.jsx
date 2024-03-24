@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer>
       <h1>footer</h1>
-      <p>texo y etc del footer</p>
+      <p>texo del footer</p>
     </footer>
   );
 };
