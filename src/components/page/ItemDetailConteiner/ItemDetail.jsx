@@ -1,9 +1,16 @@
 import ItemCountConteiner from "../../common/ItemCount/ItemCountConteiner";
 import "./ItemDetail.css";
+import Alert from "@mui/material/Alert";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 
 export const ItemDetail = ({ item, onAdd, initial }) => {
   if (!item) {
-    return <h1>El producto no existe </h1>;
+    return (
+      <Stack sx={{ width: "70%", textAlign: "center", margin: "auto" }}>
+        <Alert severity="error">Este producto NO existe</Alert>
+      </Stack>
+    );
   } else {
     return (
       <div className="container">

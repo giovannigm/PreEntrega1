@@ -40,6 +40,11 @@
   transition: background-color 0.3s ease;
 }
 
+.details-button[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 .details-button:hover {
   background-color: #0056b3;
 }

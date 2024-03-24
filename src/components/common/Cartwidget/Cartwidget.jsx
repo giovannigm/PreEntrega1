@@ -1,16 +1,28 @@
 import { useContext } from "react";
-import imgCart from "../../../assets/carrito-de-compras.svg";
 import { CartContext } from "../../../context/CartContext";
+import { Link } from "react-router-dom";
+import { BsCart3 } from "react-icons/bs";
+import { Badge } from "@mui/material";
+import { styled } from "@mui/material/styles";
 
 const Cartwidget = () => {
   const { getTotalItems } = useContext(CartContext);
   const CantidadItems = getTotalItems();
 
+  const StyledBadge = styled(Badge)(({ theme }) => ({
+    "& .MuiBadge-badge": {
+      right: 40,
+      top: 16,
+      padding: "0 4px",
+    },
+  }));
+
   return (
-    <div className="carrito">
-      <p className="prod-carrito">{CantidadItems}</p>
-      <img src={imgCart} alt="img-carrito" />
-    </div>
+    <Link to="/cart">
+      <StyledBadge badgeContent={CantidadItems} showZero color="info">
+        <BsCart3 size="30px" color="black" />
+      </StyledBadge>
+    </Link>
   );
 };
 

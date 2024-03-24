@@ -5,14 +5,24 @@ import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
 
 export const CheckoutContainer = () => {
+  const { cart, getTotalPrice, clearCart } = useContext(CartContext);
+  const [orderId, setOrderId] = useState(null);
+
+  function formatearFecha() {
+    const fecha = new Date();
+    const dia = fecha.getDate();
+    const mes = fecha.getMonth() + 1;
+    const año = fecha.getFullYear() % 100;
+    return `${dia} / ${mes} / ${año}`;
+  }
+
   const [userInfo, setUserInfo] = useState({
     name: "",
     phone: "",
     email: "",
+    fecha: formatearFecha(),
+    estado: "Generada",
   });
-
-  const { cart, getTotalPrice, clearCart } = useContext(CartContext);
-  const [orderId, setOrderId] = useState(null);
 
   const envioFormulario = (event) => {
     event.preventDefault();
@@ -41,7 +51,7 @@ export const CheckoutContainer = () => {
     <Checkout
       orderId={orderId}
       envioFormulario={envioFormulario}
-      capturar={capturar}
+      change={capturar}
     />
   );
 };

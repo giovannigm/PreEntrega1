@@ -4,6 +4,7 @@ import { CartContext } from "../../../context/CartContext";
 import "./Cart.css";
 import { Cart } from "./Cart";
 import Swal from "sweetalert2";
+import { Button } from "@mui/material";
 
 export const CartContainer = () => {
   const { cart, clearCart, getTotalPrice } = useContext(CartContext);
@@ -45,14 +46,18 @@ export const CartContainer = () => {
 
         {cart.length > 0 ? (
           <div className="btn-cart">
-            <button onClick={limpiarAlert}>Limpiar carrito</button>
+            <Button variant="contained" color="warning" onClick={limpiarAlert}>
+              Limpiar carrito
+            </Button>
             <Link to="/checkout">
-              <button>Finalizar compra</button>
+              <Button variant="contained" color="success">
+                Finalizar compra
+              </Button>
             </Link>
           </div>
         ) : (
           <Link to="/">
-            <button>Agrega productos</button>
+            <Button variant="contained" color="info">Agrega productos</Button>
           </Link>
         )}
 

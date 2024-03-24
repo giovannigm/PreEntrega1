@@ -16,6 +16,7 @@ export const Cart = () => {
             </div>
           </div>
           <button onClick={() => removeById(product.id)}>Eliminar</button>
+        
         </div>
       ))}
     </article>

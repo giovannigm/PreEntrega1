@@ -5,7 +5,6 @@ import { db } from "../../../firebaseConfig";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { CardSkeleton } from "../../common/CardSkeleton/CardSkeleton";
 
-
 const ItemListContainer = () => {
   const { category } = useParams();
   const [products, setProducts] = useState([]);
@@ -23,24 +22,32 @@ const ItemListContainer = () => {
       consulta = productFiltered;
     }
 
-    getDocs(consulta)
-      .then((res) => {
-        let arrayProductos = res.docs.map((elemento) => {
-          return { ...elemento.data(), id: elemento.id };
-        });
-        setProducts(arrayProductos);
-      })
-      .finally(() => setLoad(false));
+    getDocs(consulta).then((res) => {
+      let arrayProductos = res.docs.map((elemento) => {
+        return { ...elemento.data(), id: elemento.id };
+      });
+      setProducts(arrayProductos);
+      setLoad(false);
+    });
   }, [category]);
 
   if (load) {
-    let cantidad = products.length;
-    let cardSkeletons = [];
-
-    for (let i = 0; i < cantidad; i++) {
-      cardSkeletons.push(<CardSkeleton key={i} />);
-    }
-    return <div className="card-Skeletor">{cardSkeletons}</div>;
+    return (
+      <div className="card-Skeletor">
+        {category ? (
+          <>
+            <CardSkeleton />
+            <CardSkeleton />
+          </>
+        ) : (
+          <>
+            <CardSkeleton />
+            <CardSkeleton />
+            <CardSkeleton />
+          </>
+        )}
+      </div>
+    );
   }
   return (
     <>
