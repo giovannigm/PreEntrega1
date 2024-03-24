@@ -1,5 +1,5 @@
 // import { AgregarDocs } from "../../../AgregarDocs";
-import ProductCard from "src/components/common/ProductCard/ProductCard.jsx";
+import ProductCard from "../../../components/common/ProductCard/ProductCard.jsx";
 
 const ItemList = ({ products }) => {
   return (
