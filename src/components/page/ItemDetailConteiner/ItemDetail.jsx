@@ -2,7 +2,7 @@ import ItemCountConteiner from "../../common/ItemCount/ItemCountConteiner";
 import "./ItemDetail.css";
 import Alert from "@mui/material/Alert";
 import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
+
 
 export const ItemDetail = ({ item, onAdd, initial }) => {
   if (!item) {
