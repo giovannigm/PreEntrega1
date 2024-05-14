@@ -5,16 +5,16 @@ The proposal consists of developing an e-commerce focused on sales. The main obj
 
 ## route: "/"
 
-<img width="1432" alt="Captura de pantalla 2024-02-28 a la(s) 12 09 35 p  m" src="https://github.com/giovannigm/PreEntrega1/assets/58411051/15657e76-cd02-4a2c-86ef-261d6d860668">
+<img width="1432" alt="Captura de pantalla 2024-02-28 a la(s) 12 09 35 p  m" src="https://github.com/giovannigm/PreEntrega1/assets/58411051/fe5489f1-4d82-463f-b0c3-ab6f9d207a3b">
+
 
 ## route: "/category/ventanas"
 
-<img width="1435" alt="Captura de pantalla 2024-02-28 a la(s) 12 09 44 p  m" src="https://github.com/giovannigm/PreEntrega1/assets/58411051/4d17b7db-ac37-4a8b-989b-508555c51514">
+<img width="1435" alt="Captura de pantalla 2024-02-28 a la(s) 12 09 44 p  m" src="https://github.com/giovannigm/PreEntrega1/assets/58411051/fe56500b-e2bc-42bc-be14-1e7ede645a2a">
 
 ## route: "/category/puertas"
 
-<img width="1433" alt="Captura de pantalla 2024-02-28 a la(s) 12 09 53 p  m" src="https://github.com/giovannigm/PreEntrega1/assets/58411051/b763eab7-1053-4e9a-b50c-104c5bc52cd1">
-
+<img width="1433" alt="Captura de pantalla 2024-02-28 a la(s) 12 09 53 p  m" src="https://github.com/giovannigm/PreEntrega1/assets/58411051/96d97225-1ccf-49fd-9625-6a1a16c63828">
 
 
 ### Technologies used
