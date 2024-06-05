@@ -1,9 +1,9 @@
-header {
+/* header {
   background-color: orange;
   color: white;
   display: flex;
   align-items: center;
-  height: 10vh;
+  height: 40px;
   justify-content: space-around;
 }
 
@@ -25,7 +25,7 @@ header h1 {
   color: black;
 }
 
-.lista-nav {
+.list-nav {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -33,52 +33,37 @@ header h1 {
   align-items: center;
 }
 
-.lista-nav li a {
+.list-nav li a {
   color: #fff;
   text-decoration: none;
-  padding: 10px 12px;
+  padding: 0px 9px 9px 12px;
   display: block;
   border-radius: 10%;
-  margin: 7px;
+  margin: 7px 7px 0px 7px;
 }
 
-.lista-nav li a:hover {
+.list-nav li a:hover {
   background-color: #dfbd82;
 }
 
-.lista-nav li ul {
+.desplegable {
   display: none;
   position: absolute;
   background-color: orange;
   list-style: none;
   width: 111px;
   padding: 0%;
-  border: black 1px;
 }
 
-.desplegable li a {
-  width: auto;
-}
-
-.lista-nav li:hover > ul {
+.show-dropdown {
   display: block;
 }
-
-.lista-nav li ul li {
-  position: relative;
-}
-
-.lista-nav li ul li ul {
-  right: -140px;
-  top: 0px;
-}
-
-/* Cartwidget */
 
 .carrito {
   display: contents;
   width: 7vh;
 }
+
 .carrito img {
   max-width: 40px;
 }
@@ -94,4 +79,199 @@ header h1 {
   color: white;
   font-weight: bold;
   font-size: 14px;
+}
+
+#menuIcon {
+  display: none;
+}
+
+a , a:hover{
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  .list-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: orange;
+  }
+
+  .list-nav.show-menu {
+    display: flex;
+    margin-left: 50%;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding-left: 25px;
+  }
+
+  .desplegable {
+    position: relative; 
+    background-color: orange;
+    width: 100%;
+  }
+
+  .show-dropdown {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+  }
+
+  #menuIcon {
+    display: block;
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+  }
+} */
+
+header {
+  background-color: orange;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+#logoTipo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.titulo-logo {
+  width: auto;
+  display: inline-flex;
+  align-items: flex-end;
+}
+
+.titulo-logo h1 {
+  margin: 0;
+  color: black;
+  font-size: 24px;
+}
+
+.list-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.list-nav li {
+  position: relative;
+}
+
+.list-nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.list-nav li a:hover {
+  background-color: #dfbd82;
+}
+
+.desplegable {
+  display: none;
+  position: absolute;
+  background-color: orange;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  width: 150px;
+  z-index: 1;
+}
+
+.desplegable li a {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.show-dropdown {
+  display: block;
+}
+
+.carrito {
+  display: flex;
+  align-items: center;
+}
+
+.carrito img {
+  max-width: 40px;
+}
+
+.prod-carrito {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#menuIcon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 715px) {
+  .list-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    background-color: orange;
+  }
+
+  .list-nav.show-menu {
+    display: flex;
+    margin-left: 50%;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding-left: 15px;
+  }
+
+  .list-nav li {
+    width: 100%;
+  }
+
+  .desplegable {
+    position: static;
+    width: 100%;
+  }
+
+  .show-dropdown {
+    display: block;
+  }
+
+  #menuIcon {
+    display: block;
+  }
 }
